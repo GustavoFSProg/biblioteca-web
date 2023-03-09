@@ -90,9 +90,9 @@ function App() {
               onChange={(e) => setArea(e.target.value)} />
 
 
-              {/* <Button className="confirm-Button" type="submit">
+            <Button className="confirm-Button" type="submit">
                 Cadastrar
-              </Button> */}
+            </Button>
            
           </div>
         </form>
