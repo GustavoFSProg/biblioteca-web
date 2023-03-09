@@ -27,7 +27,7 @@ function Register() {
       </Link>
       <br />
       <br />
-      {/* {url.map(items => {
+      {url.map(items => {
         return (
           <div key={items.id}>
           <span style={{fontSize: '18px'}} > {items.sobrenome + ', ' + items.name + ',   '
@@ -38,7 +38,7 @@ function Register() {
             <br />
           </div>
         )
-      })} */}
+      })}
      
     </div>
   )
