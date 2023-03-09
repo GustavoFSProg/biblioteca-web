@@ -11,7 +11,6 @@ function Register() {
 
     setUrls(data)
 
-    // console.log(data)
   }
 
   useEffect(() => {
@@ -37,9 +36,7 @@ function Register() {
             + items.edicao + '.' }</span>
             <br />
             <br />
-
           </div>
-
         )
       })}
      
