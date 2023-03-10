@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL:'https://biblioteca-lfiqebapr-gustavofsprog.vercel.app/',
+  baseURL:'https://biblioteca-api.vercel.app/',
   // baseURL:'http://localhost:5000/',
 })
 
