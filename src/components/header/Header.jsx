@@ -1,17 +1,12 @@
-import {
-  Container, ImgLogo, LinksContainer, LinksContainerMobile,
-  Button, Input, FormDois, Form
-} from './style'
+import { Container, ImgLogo, LinksContainer, LinksContainerMobile, Button, Input, FormDois, Form } from './style'
 import logo from '../../assets/logo.png'
 import { BsSearch } from 'react-icons/bs'
 import { useState } from 'react'
 import MenuIcon from '@material-ui/icons/Menu'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 function Header() {
   const [isButtonClicked, setIsButtonClicked] = useState('none')
-
-    const navigate = useNavigate()
 
   function handleLogout() {
     localStorage.clear()
@@ -51,53 +46,40 @@ function Header() {
         type="button"
         onClick={() => handleLike()}
       >
-        <MenuIcon fontSize="medium" />
+        <MenuIcon size="35" />
       </Button>
 
       <LinksContainer>
         <div style={{ marginLeft: '40px' }}>
-          <Link
-            style={{
-              textDecoration: 'none',
-              fontFamily: 'Roboto',
-              color: 'black'
-            }} to="/">
-          HOME
+          <Link style={{ textDecoration: 'none', fontFamily: 'Roboto', color: 'black' }} to="/">
+            HOME
           </Link>
         </div>
 
         <div style={{ marginLeft: '35px' }}>
           <Link
             style={{ textDecoration: 'none', fontFamily: 'Roboto', color: 'black  ' }}
-            to="/user"
+            to="/register"
           >
-            REGISTER USER
+            CADASTRO
           </Link>
         </div>
 
         <div style={{ marginLeft: '35px' }}>
-           <Link
-            style={{
-              textDecoration: 'none',
-              fontFamily: 'Roboto',
-              color: 'black  '
-            }}
+          <Link
+            style={{ textDecoration: 'none', fontFamily: 'Roboto', color: 'black  ' }}
             to="/login"
           >
-          LOGIN
-           </Link> 
+            LOGIN
+          </Link>
         </div>
 
         <div style={{ marginLeft: '35px' }}>
           <Link
-            to="/register"
-            
-            style={{
-              textDecoration: 'none',
-              fontFamily: 'Roboto', color: 'black  '
-            }}
+            style={{ textDecoration: 'none', fontFamily: 'Roboto', color: 'black  ' }}
+            onClick={handleLogout}
           >
-          CADASTRO CLIENTES
+            LOGOUT
           </Link>
         </div>
       </LinksContainer>
@@ -140,50 +122,42 @@ function Header() {
         </div>
         <LinksContainerMobile>
           <div style={{ marginLeft: '20px', marginTop: '8px' }}>
-            {/* <a
-              ref='/'
-            style={{
-              textDecoration: 'none',
-                color: 'black',
-              zIndex: '9999',
-              
-            }} >
-          HOME
-          </a> */}
-          </div>
-
-          {/* <div style={{ marginLeft: '25px', marginBottom: '4px', marginTop: '15px', }}> */}
-               <Link
-            style={{
-              textDecoration: 'none',
-              color: 'black  '
-            }}
-            to="/login"
-          >
-          LOGIN
-           </Link> 
-          {/* </div> */}
-          <div style={{ marginLeft: '25px', marginBottom: '4px', marginTop: '15px', }}>
-          <Link
-            to="/register"
-            
-            style={{
-              textDecoration: 'none',
-              fontFamily: 'Roboto', color: 'black  '
-            }}
-          >
-          CADASTRO CLIENTES
-          </Link>
+            <Link style={{
+              textDecoration: 'none', fontSize: '21px', fontFamily: 'Roboto', color: 'white',
+              cursor: 'pointer'
+            }} to="/">
+              HOME
+            </Link>
           </div>
 
           <div style={{ marginLeft: '25px', marginBottom: '4px', marginTop: '15px', }}>
-            {/* <Link
+            <Link
+
+              style={{ cursor: 'pointer', fontSize: '21px', textDecoration: 'none', fontFamily: 'Roboto', color: 'white  ' }}
+              to="/login"
+            >
+              LOGIN
+            </Link>
+          </div>
+          <div style={{ marginLeft: '25px', marginBottom: '4px', marginTop: '15px', }}>
+            <Link
+
+              style={{ cursor: 'pointer', fontSize: '21px', textDecoration: 'none', fontFamily: 'Roboto', color: 'white  ' }}
+              onClick={handleLogout}
+
+            >
+              LOGOUT
+            </Link>
+          </div>
+
+          <div style={{ marginLeft: '25px', marginBottom: '4px', marginTop: '15px', }}>
+            <Link
 
               style={{ cursor: 'pointer', fontSize: '21px', textDecoration: 'none', fontFamily: 'Roboto', color: 'white  ' }}
               to="/register"
-            > */}
-            CADASTRO
-            {/* </Link> */}
+            >
+              CADASTRO
+            </Link>
           </div>
         </LinksContainerMobile>
 
@@ -195,7 +169,7 @@ function Header() {
 
 
 
-    </Container >
+    </Container>
   )
 }
 

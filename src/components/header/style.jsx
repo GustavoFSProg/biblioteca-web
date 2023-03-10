@@ -5,20 +5,17 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-around;
   background: #f2f2f2;
-   width: 100vw;
+  width: 100%;
   height: 3.6rem;
   border-bottom: solid 1px #b3b3b3;
   padding-top: 4px;
   padding-bottom: 3.2px;
-  margin-top: -135px;
-  margin-left: -11px;
-  
-  @media screen and (max-width: 700px) {
-    padding-bottom: 9px;
-    margin-top: -30px;
-  margin-left: -41px;
 
-  width: 100vw;
+  @media screen and (max-width: 800px) {
+    padding-bottom: 9px;
+
+
+
   }
 `
 export const Form = styled.form`
@@ -37,6 +34,7 @@ export const FormDois = styled.form`
   align-items: center;
   flex-direction: column ;
   justify-content: space-between;
+  z-index: 9999;
   background: linear-gradient(to right top, #8c8c8c 55%, #4d4d4d 45%);
   /* background:  black; */
   /* backdrop-filter: blur(20px) saturate(120%) contrast(200%); */
@@ -51,8 +49,6 @@ export const FormDois = styled.form`
   @media screen and (max-width: 800px) {
       width: 90%;
       margin-top: 10px;
-  z-index: 999;
-
   }
 
 `
@@ -77,8 +73,6 @@ export const LinksContainerMobile = styled.div`
     justify-content: center;
     padding-right: 15px;
     font-size:  0.9rem;
-    z-index: 9999;
-
   }
 `
 export const Input = styled.input`
@@ -93,6 +87,7 @@ export const Input = styled.input`
     width: 100%;
     height: 2.1rem;
     margin-left: 0px;
+    z-index: 9999;
     margin-top: 10px;
     /* filter: blur(5px); */
   }

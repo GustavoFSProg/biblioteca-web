@@ -22,6 +22,12 @@ function Register() {
       display: 'flex', width: '100%',
       alignItems: 'center', justifyContent: 'center', flexDirection: 'column'
     }}>
+      <Link to="/author">
+        Buscar
+      </Link>
+      <br />
+
+
       <Link to="/register">
         Cadastro
       </Link>
