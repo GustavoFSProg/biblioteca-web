@@ -28,7 +28,6 @@ export const InputContainer = styled.div`
   @media screen and (max-width: 800px){
     width: 100% ;
     /* margin-left: 40px; */
-
   
   }
 `
@@ -59,7 +58,7 @@ export const StyledInput = styled.input`
 
 `
 
-export const Label = styled.label<{ move: boolean }>`
+export const Label = styled.label < { move: boolean } > `
   position: absolute;
   display: flex;
   align-items: center;

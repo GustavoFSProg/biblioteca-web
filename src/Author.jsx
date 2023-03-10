@@ -5,9 +5,10 @@ import { Button } from './components/Button/style'
 import { Link, useNavigate } from 'react-router-dom'
 import api from './api'
 
+
 function Author() {
-  const [name, setName] = useState('Aline')
-  const [sobrenome, setSobrenome] = useState('Mattos')
+  const [name, setName] = useState('')
+  const [sobrenome, setSobrenome] = useState('')
   const [dados, setDados] = useState({})
 
 
@@ -60,6 +61,9 @@ function Author() {
               flexDirection: 'column',
             }}
           >
+
+
+
             <Input
               placeholder="Nome"
               id="name"
@@ -67,17 +71,24 @@ function Author() {
               onChange={(e) => setName(e.target.value)}
             />
 
-            {/* <Input
+
+
+            <Button className="confirm-Button" type="submit">
+              Buscar por Nome
+            </Button>
+            {/* <br />
+            <br />
+            <Input
               placeholder="Sobrenome"
               type="text"
               id="sobrenome"
               value={sobrenome}
               onChange={(e) => setSobrenome(e.target.value)}
-            /> */}
+            />
 
             <Button className="confirm-Button" type="submit">
-              Buscar
-            </Button>
+              Buscar por Sobrenome
+            </Button> */}
           </div>
         </form>
         <br />

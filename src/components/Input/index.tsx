@@ -5,7 +5,7 @@ interface InputProps {
   type: string
   placeholder: string
   value: string
-  style?:  any
+  style?: any
   invalid?: boolean
   required?: boolean
   errorMessage?: string
@@ -22,11 +22,12 @@ export const Input = ({
   onChange,
   style,
 }: InputProps) => (
+
   <Container>
     <InputContainer>
       <StyledInput type={type} value={value} onChange={onChange} required={required} />
       <Label move={!value}>{required ? placeholder + ' *' : placeholder}</Label>
     </InputContainer>
-    <ErrorMessage>{invalid ? errorMessage : ''}</ErrorMessage>
+    <ErrorMessage>{invalid ? ErrorMessage : ''}</ErrorMessage>
   </Container>
 )

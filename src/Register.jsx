@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import { Input } from './components/Input'
-import { Button } from './components/Button/style'
+// import { Button } from './components/Button/style'
 import { Link, useNavigate } from 'react-router-dom'
 import api from './api'
 
@@ -90,9 +90,9 @@ function App() {
               onChange={(e) => setArea(e.target.value)} />
 
 
-            <Button className="confirm-Button" type="submit">
+            {/* <Button className="confirm-Button" type="submit">
                 Cadastrar
-            </Button>
+            </Button> */}
            
           </div>
         </form>
