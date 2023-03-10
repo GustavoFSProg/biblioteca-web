@@ -93,18 +93,24 @@ function Author() {
         </form>
         <br />
         <span>
-          Nome: {dados.name}
+          <strong style={{ marginRight: '9px' }}>
+            Nome:
+          </strong>
+          {dados.name}
         </span>
         <br />
 
 
         <span>
-          Sobrenome:   {dados.sobrenome}
+          <strong style={{ marginRight: '9px' }}>
+            Sobrenome:
+          </strong>
+          {dados.sobrenome}
         </span>
         <br />
 
         <span>
-          Titulo:   {dados.titulo}
+          <strong style={{ marginRight: '9px' }}>  Titulo:  </strong>  {dados.titulo}
         </span>
         <br />
         <Link to="/">Home</Link>
