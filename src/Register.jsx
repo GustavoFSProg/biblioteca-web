@@ -44,16 +44,52 @@ function App() {
     }
   }
 
-
-
   return (
     <>
-    
-    <div style={{
+      <div style={{
+        display: 'flex',
+        justifyContent: 'space-around',
+        width: '100%',
+        background: 'gray',
+        alignItems: 'center',
+        paddingTop: '5px',
+        paddingBottom: '6px',
+        paddingLeft: '5px',
+        paddingRight: '5px',
+        height: '2rem'
+
+      }}>
+
+        <Link to="/author" style={{ color: 'white' }}>
+          Buscar
+        </Link>
+
+        <Link to="/register" style={{ color: 'white' }}>
+          Cadastro
+        </Link>
+
+
+        <Link to="/" style={{ color: 'white' }}>
+          Home
+        </Link>
+      </div>
+
+      <br />
+      <br />
+
+      <h2 style={{ marginBottom: '-30px' }}>Cadastro de Bibliografias</h2>
+
+
+      <div style={{
+        display: 'flex', width: '100vw', height: '100vh',
+        alignItems: 'center', justifyContent: 'center', flexDirection: 'column'
+      }}>
+
+        {/* <div style={{
       display: 'flex',
         alignItems: 'center', justifyContent: 'center', flexDirection: 'column',
         width: '100%'
-      }}>
+      }}> */}
 
         {/* onSubmit={handleSubmit} */}
 
@@ -103,10 +139,7 @@ function App() {
           </Button>
         </form>
         <br />
-        <br />
-        <Link to="/" >
-          Home
-        </Link>
+
       </div>
     </>
 

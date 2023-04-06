@@ -17,21 +17,67 @@ function Register() {
   }, [])
 
   return (
-    <div style={{
-      display: 'flex', width: '100%',
-      alignItems: 'center', justifyContent: 'center', flexDirection: 'column'
-    }}>
-      <Link to="/author">
-        Buscar
-      </Link>
-      <br />
+    <>
+      <div style={{
+        display: 'flex',
+        justifyContent: 'space-around',
+        width: '100%',
+        background: 'gray',
+        alignItems: 'center',
+        paddingTop: '5px',
+        paddingBottom: '6px',
+        paddingLeft: '5px',
+        paddingRight: '5px',
+        height: '2rem'
+      }}>
 
 
-      <Link to="/register">
-        Cadastro
-      </Link>
+        <Link to="/author" style={{ color: 'white' }}>
+          Buscar
+        </Link>
+
+
+        <Link to="/register" style={{ color: 'white' }}>
+          Cadastro
+        </Link>
+
+
+        <Link to="/" style={{ color: 'white' }}>
+          Home
+        </Link>
+      </div>
+
       <br />
-      <br />
+      <br />  
+
+      <div style={{
+        display: 'flex',
+        width: '100%',
+        justifyContent: 'flex-start',
+        flexDirection: 'column',
+        height: '100vh',
+        marginTop: '80px'
+      }}>
+
+        <div style={{
+          display: 'flex', width: '100vw',
+          alignItems: 'center', justifyContent: 'center',
+          flexDirection: 'column',
+          marginBottom: '60px'
+        }}>
+
+          <h2>Lista de Bibliografias</h2>
+        </div>
+
+        <div style={{
+          display: 'flex', width: '100vw',
+          alignItems: 'center', justifyContent: 'center',
+          flexDirection: 'column',
+        }}>
+
+
+
+
       {url.map(items => {
         return (
           <div key={items.id}>
@@ -42,8 +88,11 @@ function Register() {
           </div>
         )
       })}
-     
-    </div>
+        </div>
+
+      </div>
+    </>
+
   )
 }
 

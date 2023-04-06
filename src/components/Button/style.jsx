@@ -17,8 +17,11 @@ export const Button = styled.button`
   margin-top: -30px;
   /* padding-left: 10px; */
   font-size: 15px;
-  background: lightblue;
-  color: blue;
+  /* background: lightblue; */
+  background: #666666;
+  color: white;
+
+  
   cursor: pointer;
   transition: ease 0.7s;
 

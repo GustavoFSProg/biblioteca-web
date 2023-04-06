@@ -40,7 +40,47 @@ function Author() {
   }
 
   return (
-    <div>
+    <>
+      <div style={{
+        display: 'flex',
+        justifyContent: 'space-around',
+        width: '100%',
+        background: 'gray',
+        alignItems: 'center',
+        paddingTop: '5px',
+        paddingBottom: '6px',
+        paddingLeft: '5px',
+        paddingRight: '5px',
+        height: '2rem'
+      }}>
+
+        <Link to="/author" style={{ color: 'white' }}>
+          Buscar
+        </Link>
+
+        <Link to="/register" style={{ color: 'white' }}>
+          Cadastro
+        </Link>
+
+
+        <Link to="/" style={{ color: 'white' }}>
+          Home
+        </Link>
+      </div>
+      <br />
+      <br />
+
+
+      <h2 style={{ marginBottom: '-30px' }}>Pesquisa por Autor</h2>
+
+
+      <div style={{
+        display: 'flex', width: '100vw', height: '100vh',
+        alignItems: 'center', justifyContent: 'center',
+        marginTop: '-150px',
+        flexDirection: 'column'
+      }}>
+
       <form
         onSubmit={handleSubmit}
         style={{
@@ -48,7 +88,7 @@ function Author() {
           alignItems: 'center',
           justifyContent: 'center',
           flexDirection: 'column',
-          width: '100%',
+          width: '31%',
         }}
       >
         {/* <div
@@ -166,12 +206,14 @@ function Author() {
         <span>
           <strong style={{ marginRight: '9px' }}> Cidade: </strong> {dados.cidade}
         </span>
+        </div>
       </div>
+
 
       <br />
       <br />
-      <Link to="/">Home</Link>
-    </div>
+    </>
+
   )
 }
 
