@@ -9,7 +9,7 @@ export const ButtonContainer = styled.div`
 `
 
 export const Button = styled.button`
-  width: 27rem;
+  width: 26rem;
   /* max-width: 470px; */
   margin-left: 22px;
 
@@ -25,5 +25,13 @@ export const Button = styled.button`
   :hover {
     background: blue;
     color: white;
+  }
+
+  @media screen and (max-width: 800px){
+  width: 14rem;
+
+  margin-left: 12px;
+
+
   }
 `

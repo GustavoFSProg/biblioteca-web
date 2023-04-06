@@ -5,12 +5,10 @@ import { Button } from './components/Button/style'
 import { Link, useNavigate } from 'react-router-dom'
 import api from './api'
 
-
 function Author() {
   const [name, setName] = useState('')
   const [sobrenome, setSobrenome] = useState('')
   const [dados, setDados] = useState({})
-
 
   // const navigate = useNavigate()
   // const token = localStorage.getItem('Token')
@@ -42,41 +40,62 @@ function Author() {
   }
 
   return (
-    <>
-      <div
+    <div>
+      <form
+        onSubmit={handleSubmit}
         style={{
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           flexDirection: 'column',
+          width: '100%',
         }}
       >
-        <form onSubmit={handleSubmit}>
-          <div
+        {/* <div
             style={{
               display: 'flex',
-              width: '26rem',
               alignItems: 'center',
               justifyContent: 'center',
               flexDirection: 'column',
             }}
-          >
+          > */}
 
+        <Input
+          placeholder="Nome"
+          id="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          // onChange={"Chico"}
 
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexDirection: 'column',
+          }}
+        />
+        {/*
+        <Input
+          placeholder="Nome"
+          type="checkbox"
+          id="aaa"
+          value={(e) => setName("Chico")}
 
-            <Input
-              placeholder="Nome"
-              id="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
+          onChange={name}
+          // onChange={(e) => setName(e.target.value)}
 
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexDirection: 'column',
+          }}
+        /> */}
 
-
-            <Button className="confirm-Button" type="submit">
-              Buscar por Nome
-            </Button>
-            {/* <br />
+        <Button className="confirm-Button" type="submit">
+          Buscar por Nome
+        </Button>
+        {/* <br />
             <br />
             <Input
               placeholder="Sobrenome"
@@ -89,33 +108,70 @@ function Author() {
             <Button className="confirm-Button" type="submit">
               Buscar por Sobrenome
             </Button> */}
-          </div>
-        </form>
-        <br />
-        <span>
-          <strong style={{ marginRight: '9px' }}>
-            Nome:
-          </strong>
+        {/* </div> */}
+      </form>
+      <br />
+      <div style={{ marginTop: '2px' }}>
+
+        <span >
+          <strong style={{ marginRight: '9px' }}>Nome:</strong>
           {dados.name}
         </span>
-        <br />
+      </div>
 
-
-        <span>
-          <strong style={{ marginRight: '9px' }}>
-            Sobrenome:
-          </strong>
+      <br />
+      <div style={{ marginTop: '-20px' }}>
+        <span style={{ marginBottom: '13px' }}>
+          <strong style={{ marginRight: '9px' }}>Sobrenome:</strong>
           {dados.sobrenome}
         </span>
-        <br />
+      </div>
+
+      <br />
+      <div style={{ marginTop: '-20px' }}>
+        <span>
+          <strong style={{ marginRight: '9px' }}>Área:</strong>
+          {dados.area}
+        </span>
+      </div>
+
+      <br />
+
+      <div style={{ marginTop: '-20px' }}>
 
         <span>
-          <strong style={{ marginRight: '9px' }}>  Titulo:  </strong>  {dados.titulo}
+          <strong style={{ marginRight: '9px' }}>Ano:</strong>
+          {dados.ano}
         </span>
         <br />
-        <Link to="/">Home</Link>
       </div>
-    </>
+
+      <div style={{ marginTop: '5px' }}>
+
+        <span>
+          <strong style={{ marginRight: '9px' }}> Titulo: </strong> {dados.titulo}
+        </span>
+      </div>
+
+
+      <div style={{ marginTop: '5px' }}>
+
+        <span>
+          <strong style={{ marginRight: '9px' }}> Edição: </strong> {dados.edicao}
+        </span>
+      </div>
+
+      <div style={{ marginTop: '5px' }}>
+
+        <span>
+          <strong style={{ marginRight: '9px' }}> Cidade: </strong> {dados.cidade}
+        </span>
+      </div>
+
+      <br />
+      <br />
+      <Link to="/">Home</Link>
+    </div>
   )
 }
 

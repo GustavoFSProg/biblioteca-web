@@ -10,6 +10,13 @@ export const Container = styled.div`
   font-weight: normal;
   font-size: 1rem;
   line-height: 160%;
+
+
+  @media screen and (max-width: 800px){
+    width: 100% ;
+    /* margin-left: 40px; */
+  
+  }
 `
 
 export const InputContainer = styled.div`
@@ -24,12 +31,12 @@ export const InputContainer = styled.div`
     box-shadow: 0px 0px 5px 1px rgba(37, 0, 50, 0.5);
   }
 
-
   @media screen and (max-width: 800px){
-    width: 100% ;
+    width: 80% ;
     /* margin-left: 40px; */
   
   }
+
 `
 
 export const StyledInput = styled.input`

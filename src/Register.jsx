@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import { Input } from './components/Input'
-// import { Button } from './components/Button/style'
+import { Button } from './components/Button/style'
 import { Link, useNavigate } from 'react-router-dom'
 import api from './api'
 
@@ -20,7 +20,14 @@ function App() {
   async function handleSubmit(event) {
     event.preventDefault()
 
+
     try {
+
+      if (name || sobrenome || edicao || titulo
+        || area || ano || cidade === '') {
+        return alert("Favor preencher todos os campos!!")
+      }
+
       const data = {
         name, sobrenome, edicao, titulo,
         ano, cidade, area
@@ -37,20 +44,21 @@ function App() {
     }
   }
 
+
+
   return (
     <>
     
     <div style={{
       display: 'flex',
-      alignItems: 'center', justifyContent: 'center', flexDirection: 'column'
+        alignItems: 'center', justifyContent: 'center', flexDirection: 'column',
+        width: '100%'
       }}>
-        
-        <form onSubmit={handleSubmit}>
-          <div style={{
-            display: 'flex', width: '26rem', 
-            alignItems: 'center', justifyContent: 'center',
-            flexDirection: 'column'
-          }}>
+
+        {/* onSubmit={handleSubmit} */}
+
+        <form onSubmit={() => alert("Sem permissao pra cadastrar!!")}>
+
             <Input placeholder="Nome" id="name" value={name}
               onChange={(e) => setName(e.target.value)} />
             
@@ -69,8 +77,7 @@ function App() {
               onChange={(e) => setEdicao(e.target.value)}
             />
 
-            <Input placeholder="Cidade"
-
+          <Input placeholder="Cidade"
               type="text"
               id="cidade"
               value={cidade}
@@ -90,11 +97,10 @@ function App() {
               onChange={(e) => setArea(e.target.value)} />
 
 
-            {/* <Button className="confirm-Button" type="submit">
+
+          <Button className="confirm-Button" type="submit">
                 Cadastrar
-            </Button> */}
-           
-          </div>
+          </Button>
         </form>
         <br />
         <br />
