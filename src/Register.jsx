@@ -77,7 +77,7 @@ function App() {
       <br />
       <br />
 
-      <h2 style={{ marginBottom: '-30px' }}>Cadastro de Bibliografias</h2>
+      <h2 >Cadastro de Bibliografias</h2>
 
 
       <div style={{
