@@ -71,7 +71,7 @@ function Author() {
       <br />
 
 
-      <h2 style={{ marginBottom: '30px' }}>Pesquisa por Autor</h2>
+      <h2 style={{ marginBottom: '70px' }}>Pesquisa por Autor</h2>
 
 
       <div style={{
