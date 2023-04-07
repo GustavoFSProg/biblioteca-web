@@ -3,7 +3,29 @@ import './App.css'
 import { Input } from './components/Input'
 import { Button } from './components/Button/style'
 import { Link, useNavigate } from 'react-router-dom'
+import styled from 'styled-components'
 import api from './api'
+
+const Card = styled.div`
+  display: flex;
+  justify-content: center;
+  align-Items: flex-start;
+  flex-direction: column;
+  width: 36%;
+  height: auto;
+  background: #b8b894;
+  padding-left: 24px  ;
+  padding-top: 24px  ;
+  padding-right: 24px  ;
+  padding-bottom: 24px  ;
+  border-radius: 5px;
+
+  @media screen and (max-width: 800px){
+  width: 66%;
+
+  }
+
+`
 
 function Author() {
   const [name, setName] = useState('Chico')
@@ -29,7 +51,7 @@ function Author() {
 
       console.log(doidas.data)
 
-      // navigate('/author')
+      //navigate('/author')
       // return alert('Cadastro realizado com sucesso!')
 
       return dados
@@ -151,8 +173,10 @@ function Author() {
             </Button> */}
         {/* </div> */}
       </form>
-      <br />
-      <div style={{ marginTop: '2px' }}>
+        <br />
+        <Card >
+
+          <div style={{ marginTop: '2px' }}>
 
         <span >
           <strong style={{ marginRight: '9px' }}>Nome:</strong>
@@ -208,12 +232,14 @@ function Author() {
           <strong style={{ marginRight: '9px' }}> Cidade: </strong> {dados.cidade}
         </span>
         </div>
+        </Card >
+
+
+      <br />
+      <br />
       </div>
-
-
-      <br />
-      <br />
     </>
+
 
   )
 }
