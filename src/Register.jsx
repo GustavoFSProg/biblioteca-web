@@ -20,7 +20,6 @@ function App() {
   async function handleSubmit(event) {
     event.preventDefault()
 
-
     try {
 
       if (name || sobrenome || edicao || titulo
@@ -37,6 +36,21 @@ function App() {
 
       navigate('/')
       return alert('Cadastro realizado com sucesso!')
+
+    } catch (error) {
+      console.log(error)
+      return alert(`Deu erro no front ${error}`)
+    }
+  }
+
+
+  async function messageAlertSubmit(event) {
+    event.preventDefault()
+
+    try {
+
+      navigate('/')
+      return alert('Sem Permissão para cadastrar!!')
 
     } catch (error) {
       console.log(error)
@@ -93,7 +107,7 @@ function App() {
 
         {/* onSubmit={handleSubmit} */}
 
-        <form onSubmit={() => alert("Sem permissao pra cadastrar!!")}>
+        <form onSubmit={messageAlertSubmit}>
 
             <Input placeholder="Nome" id="name" value={name}
               onChange={(e) => setName(e.target.value)} />
