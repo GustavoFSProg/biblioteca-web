@@ -32,8 +32,8 @@ export const InputContainer = styled.div`
   }
 
   @media screen and (max-width: 800px){
-    width: 80% ;
-    /* margin-left: 40px; */
+    width: 152% ;
+    margin-left: -53px;
   
   }
 

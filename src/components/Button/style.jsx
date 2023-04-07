@@ -6,6 +6,7 @@ export const ButtonContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   width: 100vw;
+
 `
 
 export const Button = styled.button`
@@ -33,7 +34,7 @@ export const Button = styled.button`
   @media screen and (max-width: 800px){
   width: 14rem;
 
-  margin-left: 12px;
+  margin-left: -15px;
 
 
   }

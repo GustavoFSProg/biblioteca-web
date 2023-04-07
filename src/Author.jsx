@@ -6,7 +6,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import api from './api'
 
 function Author() {
-  const [name, setName] = useState('')
+  const [name, setName] = useState('Chico')
   const [sobrenome, setSobrenome] = useState('')
   const [dados, setDados] = useState({})
 
@@ -99,6 +99,7 @@ function Author() {
               flexDirection: 'column',
             }}
           > */}
+
 
         <Input
           placeholder="Nome"

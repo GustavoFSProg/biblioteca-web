@@ -4,6 +4,19 @@ import { Input } from './components/Input'
 import { Button } from './components/Button/style'
 import { Link, useNavigate } from 'react-router-dom'
 import api from './api'
+import styled from 'styled-components'
+
+const ListRegister = styled.div`
+   display: flex; 
+   width: 100vw;
+    height: 100vh;
+        align-items: center;
+        justify-content: center;
+         flex-direction: column;
+
+        
+
+`
 
 function App() {
   const [name, setName] = useState('')
@@ -94,10 +107,7 @@ function App() {
       <h2 style={{ marginBottom: '40px' }}>Cadastro de Bibliografias</h2>
 
 
-      <div style={{
-        display: 'flex', width: '100vw', height: '100vh',
-        alignItems: 'center', justifyContent: 'center', flexDirection: 'column'
-      }}>
+      <ListRegister >
 
         {/* <div style={{
       display: 'flex',
@@ -154,7 +164,7 @@ function App() {
         </form>
         <br />
 
-      </div>
+      </ListRegister>
     </>
 
   )
